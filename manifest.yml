@@ -1,0 +1,78 @@
+modules:
+  jira:projectPage:
+    - key: velocity-predictor-2-hello-world-project-page
+      resource: main
+      resolver:
+        function: resolver
+      title: Sprint Analyzer
+  function:
+    - key: resolver
+      handler: index.handler
+resources:
+  - key: main
+    path: static/front/build
+app:
+  id: ari:cloud:ecosystem::app/6b8f2181-d21f-4feb-b215-182f5f72c569
+
+permissions:
+  scopes:
+    - read:comment:jira
+    - read:comment.property:jira
+    - read:group:jira
+    - read:project:jira
+    - read:project-role:jira
+    - read:user:jira
+    - read:avatar:jira
+    - read:issue:jira
+    - read:issue.property:jira
+    - read:issue-link:jira
+    - read:issue-details:jira
+    - read:board-scope:jira-software
+    - read:sprint:jira-software
+    - read:jira-work
+  external:
+    fetch:
+      backend:
+        - 127.0.0.1
+        - https://velocitypredictor.atlassian.net/rest/agile/1.0/board/
+        - https://velocitypredictor.atlassian.net/rest/agile/1.0/board/1/sprint
+        - https://velocitypredictor.atlassian.net/rest/agile/1.0/board/1/issue
+        - https://testmlapp998.herokuapp.com/predict
+        - https://testmlapp998.herokuapp.com/
+        - https://jira-velocity-data-processing.herokuapp.com/
+        - https://jira-velocity-data-processing.herokuapp.com/predict
+        - https://jira-velocity-data-processing.herokuapp.com/board/
+        - https://jira-velocity-data-processing.herokuapp.com/sprint
+        - https://jira-velocity-data-processing.herokuapp.com/issue
+        - https://jira-velocity-data-processing.herokuapp.com/sublists
+        - https://jira-velocity-data-processing.herokuapp.com/make-issue-url
+        - https://jira-velocity-data-processing.herokuapp.com/assignee
+        - https://velocitysummary.herokuapp.com/1
+        - https://velocityradar.herokuapp.com/1
+        - https://jira-velocity-data-processing.herokuapp.com/get-graph/issue_list/1
+        - https://jira-velocity-data-processing.herokuapp.com/get-graph/historical_perf/1
+        - https://jira-velocity-data-processing.herokuapp.com/get-graph/current_perf/1
+        - https://velocityrad.herokuapp.com/1
+
+    scripts:
+    - static/hello-world/build/components/BarChart.js
+    - static/hello-world/build/components/IssueBoard.js
+    - static/hello-world/build/components/LineChart.js
+    - static/hello-world/build/components/Radar.js
+    - static/hello-world/build/components/SummaryBoard.js
+    - static/hello-world/src/components/Bar.js
+    - https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js
+    - https://cdn.jsdelivr.net/npm
+    - https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js
+
+    styles:
+      - https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css
+      - https://cdn.jsdelivr.net/npm
+      - static/hello-world/build/vpredictnew.css
+
+  content:
+    scripts:
+      - 'unsafe-inline'
+      - 'unsafe-eval'
+    styles:
+      - 'unsafe-inline'
