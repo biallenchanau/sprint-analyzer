@@ -13,7 +13,7 @@ This plugin can directly be used by loggin into our JIRA demo project panel with
 * Login url: https://id.atlassian.com/login
 * Project Board: https://velocitypredictor.atlassian.net/jira/software/projects/CG3/boards/1
 * Username: vpredicttest@gmail.com
-* Password: velocity123
+* Password: Please acquire on personal requests
 
 
 2.Click the Sprint Analyzer tab on the side menu to view the plugin in production environment, or
